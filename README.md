@@ -22,3 +22,24 @@ kill -9 pid 强制kill掉pid进程
 # ps(process status)命令：
 
 ps aux/ps -ef 查看所有进程状态
+
+# git把一个commit分成多个commit
+
+git rebase -i <commit-hash>~或者git rebase -i <hash-of-previous-commit>
+
+在vim编辑页面中找到要更改的那次commit，将其前面的 pick 改成 edit，保存退出vim
+
+git reset HEAD~ 回退到上一次提交
+
+若干次提交：
+
+  ```
+  git add files
+
+  git commit -m "第i个commit"
+  ```
+  
+git rebase --continue
+ 
+
+
